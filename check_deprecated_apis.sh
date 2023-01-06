@@ -73,7 +73,7 @@ function get_yaml_from_objects () {
         $(kubectl -n $NS get -o=yaml $OBJECT > ${OUTPUT_DIR}/${NS}_$OBJECT_NAME/${FILE_NAME}.yaml 2> /dev/null)&
         i=$(( (i+1) %4 ))
         printf "\r${SPIN:$i:1}"
-        sleep 0.5
+        # sleep 0.5
     done
     printf "\r"
     wait
